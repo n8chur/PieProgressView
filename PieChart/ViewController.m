@@ -33,7 +33,7 @@
 
 - (IBAction)progressSliderValueChanged:(UISlider*)sender 
 {
-    self.pieProgressView.percentFilled = sender.value;
+    self.pieProgressView.progress = sender.value;
 }
 
 - (void)dealloc {

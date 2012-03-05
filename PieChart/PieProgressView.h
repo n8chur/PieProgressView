@@ -17,7 +17,7 @@
 /*
  The progress amount as a percentage.
  */
-@property (nonatomic, assign) CGFloat percentFilled;
+@property (nonatomic, assign) CGFloat progress;
 
 /*
  The array of one or two UIColor's to use for the radial gradient over the progress.

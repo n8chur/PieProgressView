@@ -18,7 +18,7 @@
 @implementation PieProgressView
 
 @synthesize gradient = _gradient;
-@synthesize percentFilled = _percentFilled;
+@synthesize progress = _progress;
 @synthesize progressWidth = _progressWidth;
 @synthesize colorsArray = _colorsArray;
 
@@ -26,7 +26,7 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.percentFilled = 0;
+        self.progress = 0;
         self.progressWidth = 0.5;
         self.colorsArray = [NSArray arrayWithObjects:[UIColor colorWithRed:0.3f green:0.3f blue:0.7f alpha:1.0f], [UIColor colorWithRed:0.5f green:0.5f blue:0.9f alpha:1.0f], nil];
     }
@@ -44,7 +44,7 @@
         minDimension = self.bounds.size.width;
     }
     
-    UIBezierPath* path = [UIBezierPath bezierPathWithArcCenter:startPoint radius:self.bounds.size.width / 2 startAngle:-0.5 * M_PI endAngle:(-0.5 + self.percentFilled * 2) * M_PI clockwise:YES];
+    UIBezierPath* path = [UIBezierPath bezierPathWithArcCenter:startPoint radius:self.bounds.size.width / 2 startAngle:-0.5 * M_PI endAngle:(-0.5 + self.progress * 2) * M_PI clockwise:YES];
     [path addLineToPoint:startPoint];
     [path closePath];
     [path addClip];
@@ -71,14 +71,14 @@
     return _gradient;
 }
 
-- (void)setPercentFilled:(CGFloat)percentFilled {
-    if ( percentFilled > 1 ) {
-        percentFilled = 1;
+- (void)setProgress:(CGFloat)progress {
+    if ( progress > 1 ) {
+        progress = 1;
     }
-    else if ( percentFilled < 0 ) {
-        percentFilled = 0;
+    else if ( progress < 0 ) {
+        progress = 0;
     }
-    _percentFilled = percentFilled;
+    _progress = progress;
     [self setNeedsDisplay];
 }
 

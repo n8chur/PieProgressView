@@ -32,7 +32,7 @@
 		465ADE191504243A000F97C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		465ADE1A1504243A000F97C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		465ADE1D1504243A000F97C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		465ADE2415042477000F97C6 /* PieProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; path = PieProgressView.h; sourceTree = "<group>"; };
+		465ADE2415042477000F97C6 /* PieProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieProgressView.h; sourceTree = "<group>"; };
 		465ADE2515042477000F97C6 /* PieProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -244,7 +244,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PieChart/PieChart-Prefix.pch";
 				INFOPLIST_FILE = "PieChart/PieChart-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PieChart;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -255,7 +255,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PieChart/PieChart-Prefix.pch";
 				INFOPLIST_FILE = "PieChart/PieChart-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PieChart;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
